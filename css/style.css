@@ -1,0 +1,645 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+*{box-sizing: border-box;}
+html, body{margin: 0; padding: auto;}
+h1, h2, h3, h4, h5, h6, p{margin: 0; font-family: 'Poppins', sans-serif;}
+ul, ol{margin: 0; padding: 0; list-style: none; font-family: 'Poppins', sans-serif;}
+a, a:hover{ text-decoration: none;}
+span, button{font-family: 'Poppins', sans-serif;}
+
+#wrap{
+    width: 100%;
+}
+#header{
+    height: 60px; padding: 0 40px; background-color: #000028;
+    display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 2;
+}
+#header .logo{width: 150px;}
+#header .logo a{}
+#header .logo a img{display: block; height: 40px;}
+
+#header .menu{}
+#header .menu ul{display: flex;}
+#header .menu ul li{margin: 0 15px;}
+#header .menu ul li a{
+    display: block; font-size: 14px; 
+    color: #bbb; line-height: 60px; position: relative;
+    transition: color 0.5s;
+}
+#header .menu ul li a:after{
+    content: ""; display: block; position: absolute; 
+    width: 0%; height: 3px;
+    bottom: 0; left: 0; background-color: #fff; opacity: 0;
+}
+#header .menu ul li:hover a{
+    color: #fff;
+}
+#header .menu ul li a:hover::after{
+    opacity: 1; width: 100%;
+    transition: opacity 0.5s, width 0.5s;
+}
+
+#header .mypage{width: 150px;}
+#header .mypage ul{display: flex;}
+#header .mypage ul li{ margin: 0 10px;}
+#header .mypage ul li:last-child{
+    margin-right: 0;
+}
+#header .mypage ul li a{
+    display: block; width: 20px; height: 20px;
+    background-size: contain; background-position: 50% -50%;
+    text-indent: -99999px; filter: invert(70%);
+    transition: filter 0.5s;
+}
+#header .mypage ul li:hover a{
+    filter: invert(100%);
+}
+#header .mypage ul li:nth-child(1) a{
+    background-image: url(../images/sns/search_icon.svg);
+}
+#header .mypage ul li:nth-child(2) a{
+    background-image: url(../images/sns/fav_icon.svg);
+}
+#header .mypage ul li:nth-child(3) a{
+    background-image: url(../images/sns/id_icon.svg);
+}
+#header .mypage ul li:nth-child(4) a{
+    background-image: url(../images/hamburger_menu_list_options_icon.svg); 
+}
+#header .mypage ul li:nth-child(4){
+    display: none;
+}
+
+
+/* 비디오 */
+#banner{
+    width: 100%; height: 66vh;
+    position: relative; overflow: hidden;
+}
+#banner iframe{
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 180%; height: 180%;
+}
+#banner .cover{
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+}
+
+#banner img{
+    position: absolute; left: 50%; bottom: 40px; 
+    transform: translateX(-50%); height: 55px;
+}
+
+#product{
+    width: 1200px; margin: 0 auto; padding-top: 100px;
+}
+#product h2{
+    color: #555; font-size: 1.5rem;
+    text-align: center; line-height: 40px;
+    padding-bottom: 40px;
+}
+#product .content{
+    display: flex; flex-wrap: wrap;
+    justify-content: space-between;
+}
+#product .content .box{
+    width: calc(100% / 12 * 3 - 20px);
+    margin: 10px;
+    height: 280px; position: relative;
+}
+#product .content .box:first-child{
+    width: calc(100% / 12 * 6 - 20px);
+}
+#product .content .box .img{
+    display: block; width: 100%; height: 100%;
+    background-size: cover; background-position: 50% 50%;
+}
+#product .content .box:nth-child(1) .img{
+    background-image: url(../images/newArrivalBg.jpg);
+    margin-top: none;}
+#product .content .box:nth-child(2) .img{
+    background-image: url(../images/products/new_01_01.jpg);
+    margin-top: none;}
+#product .content .box:nth-child(3) .img{
+    background-image: url(../images/products/new_02_01.jpg);
+    margin-top: none;}
+#product .content .box:nth-child(4) .img{
+    background-image: url(../images/products/new_03_01.jpg);}
+#product .content .box:nth-child(5) .img{
+    background-image: url(../images/products/new_04_01.jpg);}
+#product .content .box:nth-child(6) .img{
+    background-image: url(../images/products/new_05_01.jpg);}
+#product .content .box:nth-child(7) .img{
+    background-image: url(../images/products/new_06_01.jpg);}
+#product .content .box:nth-child(8) .img{
+    background-image: url(../images/products/new_07_01.jpg);}
+#product .content .box:nth-child(9) .img{
+    background-image: url(../images/products/new_08_01.jpg);}
+#product .content .box:nth-child(10) .img{
+    background-image: url(../images/products/new_09_01.jpg);}
+#product .content .box:nth-child(11) .img{
+    background-image: url(../images/products/new_10_01.jpg);}
+#product .content .box .info{
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+#product .content .box .info .info_txt{
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #fff;
+    width: 100%;
+}
+#product .content .box:first-child .info{
+    background-color: transparent;
+}
+#product .content .box:first-child .info .info_txt{
+    position: absolute; top: 50%; left: 0; transform: translate(0, -50%);
+    text-align: left; padding-left: 20px; color: #ccc;
+}
+#product .content .box:first-child .info .info_txt h3{
+    line-height: 40px; font-size: 1.4rem; font-weight: 400;
+}
+#product .content .box:first-child .info .info_txt p{
+    font-size: 0.85rem; font-weight: 300;
+}
+#product .content .box .info .info_txt h3{
+    font-size: 1rem; font-weight: 400; line-height: 40px;
+}
+#product .content .box .info .info_txt p{
+    font-size: 0.875rem; font-weight: 300; padding-bottom: 15px;
+}
+#product .content .box .info .info_txt button{
+    width: 80px; height: 30px; color: #555; font-size: 0.875rem;
+    border: none; background-color: #fff;
+    font-weight: 500; border-radius: 2px; cursor: pointer;
+}
+#product .content .box .info .info_txt button:hover{
+    background-color: transparent; color: #fff;
+    border: 1px solid #fff;
+    transition: 0.5s;
+}
+#product .content .box .info .info_txt button:hover::after{
+}
+
+#categories{
+    width: 1840px; margin: 0 auto; padding-top: 170px;
+}
+#categories h2{
+    color: #555; font-size: 1.5rem;
+    text-align: center; line-height: 40px;
+    padding-bottom: 20px;
+}
+#categories>p{
+    color: #555; font-size: 1rem; text-align: center;
+    line-height: 20px; padding-bottom: 40px;
+}
+#categories .running{
+    display: flex; flex-wrap: wrap; justify-content: space-between;
+}
+#categories .running .cont{
+    width: calc(100% / 3 - 20px); 
+}
+#categories .running .cont .r_img{
+    width: 100%; height: 600px; margin-bottom: 40px;
+    overflow: hidden;
+}
+#categories .running .cont .r_img a{
+    width: 100%; height: 100%; display: block;
+    background-size: cover; background-position: 50% 50%;
+    transition: 0.5s;
+}
+#categories .running .cont:nth-child(1) .r_img a{
+    background-image: url(../images/category_01.jpg);
+}
+#categories .running .cont:nth-child(2) .r_img a{
+    background-image: url(../images/category_02.jpg);
+}
+#categories .running .cont:nth-child(3) .r_img a{
+    background-image: url(../images/category_03.jpg);
+}
+#categories .running .cont .txt{
+    width: 100%; height: 180px; padding: 30px 0;
+    display: flex; justify-content: space-between; flex-direction: column;
+    text-align: center; align-items: center;
+    background-color: #e2e2e2;
+}
+#categories .running .cont .txt h3{
+    color: #555; font-size: 1.25rem;
+}
+#categories .running .cont .txt p{
+    color : #777; font-size: 0.87rem;
+    font-weight: 500;
+}
+#categories .running .cont .txt span{
+    display: block; font-size: 1rem; width: 140px; height: 40px;
+    line-height: 40px; background-color: #000028; color: #fff;
+    transition: background-color 0.5s;
+}
+#categories .running .cont:hover .r_img a{
+    transform: scale(1.02); transition: transform 0.5s;
+}
+#categories .running .cont:hover .txt span{
+    background-color: #555; transition: background-color 0.5s;
+}
+
+
+#mid_banner{
+    width: 1200px; height: 260px;
+    margin: 0 auto; padding-top: 120px;
+}
+#mid_banner .mid{width: 100%; height: 260px; display: flex;}
+#mid_banner .mid .m_img{
+    width: 50%; height: 100%;
+}
+#mid_banner .mid .m_img a{
+    width: 100%; height: 100%; display: block;
+    background-image: url(../images/run\ puma.jpg);
+    background-size: cover; background-position: 50% 50%;
+}
+#mid_banner .mid .m_txt{
+    width: 50%; height: 100%;
+    padding: 27px 110px 27px 40px;
+    background-color: #000028;
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+}
+#mid_banner .mid .m_txt h3{
+    font-size: 1.5rem; color: #fff; line-height: 17px;
+}
+#mid_banner .mid .m_txt p{
+    font-size: 0.8rem; color: #fff; font-weight: 300;
+}
+#mid_banner .mid .m_txt button{
+    width: 118px; height: 30px;
+    border: 1px solid #fff; background-color: transparent;
+    color: #fff; transition: background-color 0.5s, color 0.5s;
+}
+#mid_banner .mid .m_txt button:hover{
+    background-color: #fff; color: #555;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+#collections{
+    width: 1840px; margin: 0 auto; padding-top: 180px;
+}
+#collections h2{
+    color: #555; font-size: 1.5rem;
+    text-align: center; line-height: 40px;
+    padding-bottom: 20px;
+}
+#collections>p{
+    color: #555; font-size: 1rem; text-align: center;
+    line-height: 20px; padding-bottom: 40px;
+}
+#collections .content{
+    display: flex; flex-wrap: wrap; justify-content: space-between;
+}
+#collections .content .cont{
+    width: calc(100% / 3 - 20px); 
+    overflow: hidden;
+}
+#collections .content .cont .r_img{
+    width: 100%; height: 600px; overflow: hidden;
+    margin-bottom: 40px;
+}
+#collections .content .cont .r_img a{
+    display: block;
+    width: 100%; height: 100%; 
+    background-size: cover; background-position: 50% 50%;
+    transition: 0.5s;
+}
+#collections .content .cont:nth-child(1) .r_img a{
+    background-image: url(../images/collection_01.jpg);
+}
+#collections .content .cont:nth-child(2) .r_img a{
+    background-image: url(../images/collection_02.jpg);
+}
+#collections .content .cont:nth-child(3) .r_img a{
+    background-image: url(../images/collection_03.jpg);
+}
+#collections .content .cont .txt{
+    width: 100%; height: 180px; padding: 30px 0;
+    display: flex; justify-content: space-between; flex-direction: column;
+    text-align: center; align-items: center;
+    background-color: #e2e2e2;
+}
+#collections .content .cont .txt h3{
+    color: #555; font-size: 1.25rem;
+}
+#collections .content .cont .txt p{
+    color : #777; font-size: 0.87rem;
+    font-weight: 500;
+}
+#collections .content .cont .txt span{
+    display: block; font-size: 1rem; width: 140px; height: 40px;
+    line-height: 40px; background-color: #000028; color: #fff;
+    transition: background-color 0.5s;
+}
+#collections .content .cont:hover .r_img a{
+    transform: scale(1.02); transition: transform 0.5s;
+}
+#collections .content .cont:hover .txt span{
+    background-color: #555; transition: background-color 0.5s;
+}
+
+#footer{
+    width: 100%; padding-top: 120px;
+}
+footer{
+    height: auto; background-color: #212121;
+    display: flex;
+    background-image: url(../images/footer_bg.jpg);
+    background-size: cover; background-position: 50% 50%;
+    background-repeat: repeat-x;
+
+}
+footer .bg{
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    background-image: url(../images/puma-logo-white.png);
+    background-size: 18%; background-position: 104% 165px;
+    background-repeat: no-repeat;
+
+}
+footer .f_cont{
+    padding: 40px 40px 20px 40px; display: flex;
+}
+footer .f_cont .f_logo{
+    width: 330px;
+}
+footer .f_cont .f_logo a{}
+footer .f_cont .f_logo a img{
+    display: block; height: 50px; filter: brightness(0) invert(80%);
+}
+footer .f_cont .f_menu{
+    display: flex; 
+    border-bottom: 1px solid #555;
+    padding-bottom: 40px;
+}
+footer .f_cont .f_menu > .main_menu{
+    font-size: 1rem; color: #fff;
+    width: 580px; line-height: 30px;
+}
+footer .f_cont .f_menu > .main_menu:nth-child(2){
+    padding-left: 30px;
+}
+footer .f_cont .f_menu .main_menu .sub_menu{
+    display: flex; flex-wrap: wrap; border-top: 1px solid #ccc;
+}
+footer .f_cont .f_menu .main_menu .sub_menu>li{
+    width: 50%; padding-top: 10px; 
+}
+footer .f_cont .f_menu >.main_menu .sub_menu li > a{
+    display: block; line-height: 20px; color: #ccc; font-size: 0.875rem;
+}
+
+footer .copyright{
+    display: block; font-size: 0.875rem; color: #ccc; text-align: center; padding: 20px;
+}
+
+@media (max-width : 1199px){
+    #banner img{
+        position: absolute; left: 50%; bottom: 4.76%; 
+        transform: translateX(-50%); height: 6.548%;
+    }
+    #product{
+        width: 100%;
+    }
+    #product .content .box:first-child .info .info_txt{
+        padding-left: 0; text-align: center;
+    }
+
+    #categories{width: 100%;}
+    #categories .running .cont .r_img{height: 500px;}
+
+    #mid_banner{width: 100%;}
+
+    #collections{width: 100%;}
+    #collections .content .cont .r_img{height: 500px;}
+
+
+    footer .bg{
+        background-size: 15%;
+    }
+    footer .f_cont .f_menu > .main_menu{
+        width: calc(100% / 12 * 6 - 20px);
+    }
+}
+
+
+@media (max-width : 991px){
+    #header{padding: 0 20px;}
+
+    #header .menu{
+        position: absolute; top: 60px; left: 0; width: 100%;
+        background-color: #333; text-align: center;
+        max-height: 0; overflow-y: hidden;
+        transition: max-height 0.5s;
+    }
+    #header .menu.active{
+        max-height: 200px;
+        transition: max-height 0.5s;
+    }
+
+    #header .menu ul{
+        flex-direction: column;
+    }
+    #header .menu ul li{ margin: 0;}
+    #header .menu ul li a{ line-height: 40px; }
+    #header .menu ul li a:after{
+        background-color: transparent;
+    }
+    #header .mypage ul li:nth-child(4){
+        display: block;
+    }  
+
+    #product .content .box{
+        width: calc(100% / 12 * 6 - 20px);
+        height: 280px; position: relative;
+    }
+    #product .content .box:first-child{
+        width: calc(100% - 20px);
+    }
+
+    #categories .running .cont{
+        width: calc(100% / 3 - 20px); margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+    }
+    #categories .running .cont:nth-child(2){
+        width: calc(100% / 3);
+    }
+    #categories .running .cont .r_img{
+        margin-bottom: 0;
+    }
+    #categories .running .cont .txt{
+        position: absolute;
+        top: 100%; left: 0;
+        width: 100%; height: 100%; padding: 30px 0;
+        display: flex; justify-content: center; flex-direction: column;
+        text-align: center; align-items: center;
+        background-color: rgba(0,0,0,0.5);
+    }
+    #categories .running .cont .txt h3{
+        color: #fff; font-weight: 400;
+    }
+    #categories .running .cont .txt p{
+        color: #fff; padding: 20px 10px;
+    }
+    #categories .running .cont:hover .r_img a{
+        transform: scale(1.02); transition: transform 1s;
+    }
+    #categories .running .cont:hover .txt span{
+        background-color: #000028;
+    }
+    #categories .running .cont:hover .txt{
+        top: 0; transition: top 0.5s;
+    }
+    #categories .running .cont:hover .txt span:hover{
+        background-color: #fff; color: #000028; font-weight: 500; transition: background-color 0.5s, color 0.5;
+    }
+
+    #mid_banner .mid{height: 200px; position: relative;}
+    #mid_banner .mid .m_img{ width: 100%;}
+    #mid_banner .mid .m_img a{
+        width: 100%; height: 100%; display: block;
+        background-image: url(../images/run\ puma.jpg);
+        background-size: cover; background-position: 50% 20%;
+    }
+    #mid_banner .mid .m_txt{
+        position: absolute; top: 0; left: 0;
+        width: 100%; background-color: rgba(0,0,0,0.5);
+    }
+
+
+    #collections .content .cont{
+        width: calc(100% / 3 - 20px); margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+    }
+    #collections .content .cont:nth-child(2){
+        width: calc(100% / 3);
+    }
+    #collections .content .cont .r_img{
+        margin-bottom: 0;
+    }
+    #collections .content .cont .txt{
+        position: absolute;
+        top: 100%; left: 0;
+        width: 100%; height: 100%; padding: 30px 0;
+        display: flex; justify-content: center; flex-direction: column;
+        text-align: center; align-items: center;
+        background-color: rgba(0,0,0,0.5);
+    }
+    #collections .content .cont .txt h3{
+        color: #fff; font-weight: 400;
+    }
+    #collections .content .cont .txt p{
+        color: #fff; padding: 20px 10px;
+    }
+    #collections .content .cont:hover .r_img a{
+        transform: scale(1.02); transition: transform 1s;
+    }
+    #collections .content .cont:hover .txt span{
+        background-color: #000028;
+    }
+    #collections .content .cont:hover .txt{
+        top: 0; transition: top 0.5s;
+    }
+    #collections .content .cont:hover .txt span:hover{
+        background-color: #fff; color: #000028; font-weight: 500; transition: background-color 0.5s, color 0.5;
+    }
+
+    
+    footer .f_cont .f_menu{
+        border: none;
+    }
+    footer .f_cont{
+        flex-wrap: wrap;
+    }
+    footer .f_cont .f_logo a img{
+        display: block; height: 35px; filter: brightness(0) invert(80%); margin-bottom: 10px;
+    }
+    footer .f_cont .f_menu >.main_menu .sub_menu li > a span{
+        display: none;
+    }
+}
+
+  
+@media (max-width : 767px){
+    #product .content .box{
+        width: calc(100% - 20px);
+        height: 280px; position: relative;
+        margin-bottom: 0;
+    }
+    
+    #categories .running{padding: 0 10px;}
+
+    #categories .running .cont{
+        width: calc(100% - 20px); 
+        height: calc(100vw - 20px);
+        margin: 0 auto 20px;
+        position: relative;
+        overflow: hidden;
+    }
+    #categories .running .cont:nth-child(2){
+        width: calc(100% - 20px);
+    }
+    #categories .running .cont .r_img{
+        height: 100%;
+        margin-bottom: 0;
+    }
+    #categories .running .cont .txt{
+        position: absolute;
+        top: 100%; left: 0;
+        width: 100%; height: 100%;
+        display: flex; justify-content: center; flex-direction: column;
+        text-align: center; align-items: center;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+
+    #mid_banner .mid .m_txt{
+        padding: 27px 40px; text-align: center;
+    }
+    #mid_banner .mid .m_txt button{
+        margin: 0 auto;
+    }
+
+
+    #collections .content  .cont{
+        width: calc(100% - 20px); 
+        height: calc(100vw - 20px);
+        margin: 0 auto 20px;
+        position: relative;
+        overflow: hidden;
+    }
+    #collections .content  .cont:nth-child(2){
+        width: calc(100% - 20px);
+    }
+    #collections .content  .cont .r_img{
+        height: 100%;
+        margin-bottom: 0;
+    }
+    #collections .content  .cont .txt{
+        position: absolute;
+        top: 100%; left: 0;
+        width: 100%; height: 100%;
+        display: flex; justify-content: center; flex-direction: column;
+        text-align: center; align-items: center;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    footer .f_cont .f_menu{
+        flex-direction: column;
+        padding-bottom: 0;
+        
+    }
+    footer .f_cont .f_menu > .main_menu{
+        width: calc(100% );
+        padding-bottom: 20px;
+    }
+    footer .f_cont .f_menu > .main_menu:nth-child(2){
+        padding: 0
+    }
+
+}
